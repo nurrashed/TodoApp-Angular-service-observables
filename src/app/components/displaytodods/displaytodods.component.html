@@ -1,0 +1,45 @@
+<!-- <ul>
+    <li *ngFor='let t of TodoList'>
+        {{t.title}} - {{t.id}}
+        <button type="button" class="del">Delete</button>
+    </li>
+</ul> -->
+
+
+<!-- <div>
+    <p *ngFor='let t of TodoList'>
+        <input type="checkbox">
+        {{t.title}} - {{t.id}}
+        <button type="button" (click)='serviceTodo.onDelete(t.id)'>Delete</button>
+    </p>
+</div> -->
+
+<!-- <div>
+    <p *ngFor='let t of TodoList'>
+        <input type="checkbox">
+        {{t.title}} - {{t.id}}
+        <button mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)='onDelete(t.id)'>
+            <mat-icon>delete</mat-icon>
+        </button>
+    </p>
+</div> -->
+
+<div class="sortbutton">
+    <button type="button" (click)='serviceTodo.sortItem()'>Sort Item alphabetical order</button>
+</div>
+<ul>
+ 
+
+    <li *ngFor='let t of TodoList'>
+        <mat-slide-toggle class="slidermargin" (change)='checkBox(t)' [checked]='!!t.completed' color='primary'>
+            <span [ngClass]='{done:t.completed}'>{{t.title}}</span>
+        </mat-slide-toggle>
+        <button class="test" mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)='onDelete(t.id)'>
+            <mat-icon>delete</mat-icon>
+        </button>
+    </li>
+</ul>
+
+
+
+

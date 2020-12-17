@@ -1,0 +1,31 @@
+
+<!-- <input type="text" #inputValue>
+<button type="button" (click)='addTask(inputValue.value)'>Add Task</button> -->
+
+<!-- <input type="text" #input (keyup)='updateText(input.value)' [value] = 'inputValue'>
+<button type="button" (click)='addTask()'>Add Task</button> -->
+
+<!-- <input 
+    type="text" 
+    #inputValue 
+    (keyup)='eventHandling(inputValue.value)' 
+    [value]='newTodo'
+>
+<button type="button" (click)='sendToParent()'>Add Task</button> -->
+
+
+
+<input 
+    type="text" 
+    #inputValue 
+    (keyup)='updateText(inputValue.value)' 
+    [value]='newTodo'
+    placeholder="Write Todo Item"
+    class="input"
+>
+<button class="button" type="button" (click)='addTask()' mat-raised-button color='primary'>Add Task</button>
+
+
+
+
+
